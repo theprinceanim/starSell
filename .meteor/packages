@@ -9,3 +9,14 @@ autopublish
 insecure
 aldeed:autoform
 aldeed:collection2
+cfs:standard-packages
+cfs:gridfs
+cfs:ui
+cfs:autoform
+yogiben:autoform-file
+iron:router
+aldeed:delete-button
+yogiben:autoform-modals
+accounts-ui
+accounts-password
+twbs:bootstrap

@@ -1,0 +1,17 @@
+<template name="items">
+	{{> loginButtons align="left"}}
+	{{> quickForm collection="Items" id="insertItemForm" type="insert"}}
+	{{> autoformModals}}
+	<br>
+	<br>
+	{{#each items}}
+	<a href="{{pathFor 'itemDetails' _id=_id}}" class="btn btn-primary">
+		{{itemName}}</a>
+		{{price}}
+		<img src="{{getImg picture}}" width="200px" height="200px">
+		{{#quickRemoveButton collection="Items" _id=this._id}}Delete{{/quickRemoveButton}}
+		{{#afModal class="btn btn-primary" collection="Items" operation="update" doc=_id}}
+		Update post
+		{{/afModal}}
+		{{/each}}
+	</template>
