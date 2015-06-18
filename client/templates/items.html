@@ -1,17 +1,38 @@
+
 <template name="items">
-	{{> loginButtons align="left"}}
-	{{> quickForm collection="Items" id="insertItemForm" type="insert"}}
 	{{> autoformModals}}
-	<br>
-	<br>
-	{{#each items}}
-	<a href="{{pathFor 'itemDetails' _id=_id}}" class="btn btn-primary">
-		{{itemName}}</a>
-		{{price}}
-		<img src="{{getImg picture}}" width="200px" height="200px">
-		{{#quickRemoveButton collection="Items" _id=this._id}}Delete{{/quickRemoveButton}}
-		{{#afModal class="btn btn-primary" collection="Items" operation="update" doc=_id}}
-		Update post
-		{{/afModal}}
-		{{/each}}
+	<!-- Adding items -->
+	{{#afModal class="btn btn-primary" collection="Items" operation="insert"}}
+	Post Item
+	{{/afModal}}
+	
+	<div id="features-wrapper">
+		<section id="features" class="container">
+			<header>
+				<h2>Gentlemen, behold! This is <strong>Strongly Typed</strong>!</h2>
+			</header>
+			<div class="row">
+				{{#each items}}
+				<div class="4u 12u(mobile)">
+
+					<!-- Feature -->
+					<section>
+						<a href="{{pathFor 'itemDetails' _id=_id}}">
+							<a class="image featured"><img src="{{getImg picture}}"></a>
+							<header>
+								<h3>
+									{{itemName}}</h3>
+								</header>
+								<p>{{price}}</p>
+							</a>
+							{{#quickRemoveButton collection="Items" class="btn btn-primary" _id=this._id}}Delete{{/quickRemoveButton}}
+							{{#afModal class="btn btn-primary" collection="Items" operation="update" doc=_id}}
+							Update post
+							{{/afModal}}
+						</section>	
+					</div>
+					{{/each}}
+				</div>	
+			</section>
+		</div>
 	</template>

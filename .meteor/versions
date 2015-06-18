@@ -70,8 +70,10 @@ momentjs:moment@2.8.4
 mongo@1.1.0
 mongo-livedata@1.0.8
 mpowaga:string-template@0.1.0
+mrt:moment@2.8.1
 npm-bcrypt@0.7.8_2
 observe-sequence@1.0.6
+ogamedia:timer@0.0.9
 ordered-dict@1.0.3
 raix:eventemitter@0.1.2
 raix:handlebar-helpers@0.2.4

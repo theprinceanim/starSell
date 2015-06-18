@@ -1,5 +1,6 @@
 Router.configure({
-	// routeControllerNameConverter: "camelCase"
+	layoutTemplate: "masterLayout",
+	routeControllerNameConverter: "camelCase"
 })
 
 Router.route('/', function () {      // Route is the path after the url
