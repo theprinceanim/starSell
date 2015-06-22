@@ -1,11 +1,10 @@
 
 <template name="items">
-	{{> autoformModals}}
-	<!-- Adding items -->
+	<!-- {{> autoformModals}}
 	{{#afModal class="btn btn-primary" collection="Items" operation="insert"}}
 	Post Item
-	{{/afModal}}
-	
+	{{/afModal}} -->
+	<a href="#" class="btn btn-primary" id="post-item-btn">Post Item</a>
 	<div id="features-wrapper">
 		<section id="features" class="container">
 			<header>
@@ -26,13 +25,16 @@
 								<p>{{price}}</p>
 							</a>
 							{{#quickRemoveButton collection="Items" class="btn btn-primary" _id=this._id}}Delete{{/quickRemoveButton}}
-							{{#afModal class="btn btn-primary" collection="Items" operation="update" doc=_id}}
+							<!-- {{#afModal class="btn btn-primary" collection="Items" operation="update" doc=_id}}
 							Update post
-							{{/afModal}}
+							{{/afModal}} -->
 						</section>	
 					</div>
 					{{/each}}
 				</div>	
 			</section>
 		</div>
+		{{> postItemModal}}
 	</template>
+
+

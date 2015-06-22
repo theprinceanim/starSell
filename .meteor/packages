@@ -16,8 +16,11 @@ cfs:autoform
 yogiben:autoform-file
 iron:router
 aldeed:delete-button
-yogiben:autoform-modals
 accounts-ui
 accounts-password
 twbs:bootstrap
 ogamedia:timer
+yogiben:autoform-modals
+email
+kevohagan:sweetalert
+jquery

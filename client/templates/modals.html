@@ -1,0 +1,43 @@
+<template name="postItemModal">
+    <div id="postItemModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Post Item</h4>
+          </div>
+          <div class="modal-body">
+            {{> quickForm collection="Items" id="postItem" type="insert"}}
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</template>
+
+<template name="sendItemEmailModal">
+  <div id="sendItemEmailModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Send Item</h4>
+        </div>
+        <div class="modal-body">
+          {{> quickForm collection="Emails" id="sendItemEmailForm" type="method" meteormethod="sendItemEmail"}}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</template>
